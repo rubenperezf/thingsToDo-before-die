@@ -53005,7 +53005,7 @@ const ToDo = ({
   return _react.default.createElement("li", {
     onClick: onClick,
     style: {
-      color: completed ? 'white' : 'green'
+      color: completed ? 'white' : 'darkblue'
     }
   }, text);
 };

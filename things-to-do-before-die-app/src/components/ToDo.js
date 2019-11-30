@@ -7,7 +7,7 @@ const ToDo = ({ completed, text, onClick }) => {
   return (
     <li
       onClick={onClick}
-      style={{ color: completed ? 'white' : 'green' }}
+      style={{ color: completed ? 'white' : 'darkblue' }}
     >
       {text}
     </li>
