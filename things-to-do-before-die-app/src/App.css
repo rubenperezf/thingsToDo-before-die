@@ -103,3 +103,28 @@ form {
     margin: 30px;
 
 }
+
+/*delorean*/
+.presentation {
+    width: 50%;
+    height: 100%;
+    position: fixed;
+    animation-name: spiderman;
+    animation-duration: 8s;
+    animation-fill-mode: forwards;
+  
+  }
+  @keyframes spiderman {
+  
+    from {left: -200px;}
+    to {left: 2000px;}
+  }
+  .presentation img {
+    height: 500px;
+  }
+  @keyframes options {
+    from {left: -500px;}
+    to {left: 10px;}
+    from {top: 0px;}
+    to {top: 0px;}
+  }

@@ -53281,7 +53281,32 @@ const Footer = () => {
 
 var _default = Footer;
 exports.default = _default;
-},{"react":"../node_modules/react/index.js","../containers/FilterLink":"containers/FilterLink.js","../actions":"actions.js"}],"components/App.js":[function(require,module,exports) {
+},{"react":"../node_modules/react/index.js","../containers/FilterLink":"containers/FilterLink.js","../actions":"actions.js"}],"components/Delorean.js":[function(require,module,exports) {
+"use strict";
+
+Object.defineProperty(exports, "__esModule", {
+  value: true
+});
+exports.default = void 0;
+
+var _react = _interopRequireDefault(require("react"));
+
+function _interopRequireDefault(obj) { return obj && obj.__esModule ? obj : { default: obj }; }
+
+const Delorean = () => {
+  return _react.default.createElement("section", {
+    className: "principal",
+    id: "principal"
+  }, _react.default.createElement("div", {
+    className: "presentation"
+  }, _react.default.createElement("img", {
+    src: "https://cdn.pixabay.com/photo/2018/01/20/23/21/elephant-3095554_1280.png"
+  })));
+};
+
+var _default = Delorean;
+exports.default = _default;
+},{"react":"../node_modules/react/index.js"}],"components/App.js":[function(require,module,exports) {
 "use strict";
 
 Object.defineProperty(exports, "__esModule", {
@@ -53299,6 +53324,8 @@ var _AddToDo = _interopRequireDefault(require("../containers/AddToDo"));
 
 var _Footer = _interopRequireDefault(require("./Footer"));
 
+var _Delorean = _interopRequireDefault(require("./Delorean.js"));
+
 function _interopRequireDefault(obj) { return obj && obj.__esModule ? obj : { default: obj }; }
 
 const App = () => {
@@ -53306,7 +53333,7 @@ const App = () => {
     className: "box"
   }, _react.default.createElement("h1", {
     className: "web-header"
-  }, "Bucket list by Ruben Perez")), _react.default.createElement("div", {
+  }, "Bucket List by Ruben Perez")), _react.default.createElement(_Delorean.default, null), _react.default.createElement("div", {
     className: "web-body"
   }, _react.default.createElement(_AddToDo.default, null), _react.default.createElement("div", {
     className: "list"
@@ -53317,7 +53344,7 @@ const App = () => {
 
 var _default = App;
 exports.default = _default;
-},{"react":"../node_modules/react/index.js","../App.css":"App.css","../containers/VisibleToDoList":"containers/VisibleToDoList.js","../containers/AddToDo":"containers/AddToDo.js","./Footer":"components/Footer.js"}],"index.js":[function(require,module,exports) {
+},{"react":"../node_modules/react/index.js","../App.css":"App.css","../containers/VisibleToDoList":"containers/VisibleToDoList.js","../containers/AddToDo":"containers/AddToDo.js","./Footer":"components/Footer.js","./Delorean.js":"components/Delorean.js"}],"index.js":[function(require,module,exports) {
 "use strict";
 
 var _react = _interopRequireDefault(require("react"));
