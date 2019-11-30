@@ -1,0 +1,98 @@
+body {
+    background-image: url("https://images.unsplash.com/photo-1433946160509-54ed63ba50b4?ixlib=rb-1.2.1&ixid=eyJhcHBfaWQiOjEyMDd9&auto=format&fit=crop&w=2100&q=80");
+    color: white;
+    font-size: 20px;
+}
+
+.box{
+    margin: 60px auto;
+    width: 50%; 
+    height: 100px;
+	background-color: #DDFFF7;
+	position: relative;
+    box-shadow: 1px 1px 1px 0 rgba(0,0,0,0.75);
+    color: black;
+}
+.box:after, .box:before{
+	mix-blend-mode:multiply;
+	filter:none;
+	z-index: -1;
+	content:'';
+	width:calc(100% + (20px * 2));
+	height:calc(100% + (20px * 2));
+	position: absolute;
+	display: block;
+	animation: border 10s ease-in-out infinite;
+	transform:translateX(-50px) translateY(-50px);
+}
+@keyframes border {
+  0%, 100% {
+    -webkit-clip-path: polygon(0 0, calc(100% - (33.3333333333px)) calc(0% + (33.3333333333px)), 100% 100%, calc(0% + (33.3333333333px)) calc(100% - (33.3333333333px)));
+            clip-path: polygon(0 0, calc(100% - (33.3333333333px)) calc(0% + (33.3333333333px)), 100% 100%, calc(0% + (33.3333333333px)) calc(100% - (33.3333333333px)));
+  }
+  50% {
+    -webkit-clip-path: polygon(calc(0% + (33.3333333333px)) calc(0% + (33.3333333333px)), 100% 0, calc(100% - (33.3333333333px)) calc(100% - (33.3333333333px)), 0 100%);
+            clip-path: polygon(calc(0% + (33.3333333333px)) calc(0% + (33.3333333333px)), 100% 0, calc(100% - (33.3333333333px)) calc(100% - (33.3333333333px)), 0 100%);
+  }
+}
+
+.box:after{
+	animation-delay: -5s;
+	background-color: #93e1d8;
+	clip-path: polygon(0 0, calc(100% - (33.3333333333px)) calc(0% + (33.3333333333px)), 100% 100%, calc(0% + (33.3333333333px)) calc(100% - (33.3333333333px)));
+}
+.box:before {
+	background-color: #AA4465;
+	  clip-path: polygon(calc(0% + (33.3333333333px)) calc(0% + (33.3333333333px)), 100% 0, calc(100% - (33.3333333333px)) calc(100% - (33.3333333333px)), 0 100%);
+}
+
+.box:hover:after{
+	animation-delay: -0.1s;
+}
+.box:hover:before, .box:hover:after {
+
+          animation-duration: 0.2s;
+}
+.web-body {
+    position: relative;
+    top: 100px;
+}
+
+
+
+.list {
+    border: solid 1px white;
+    font-size: 30px;
+
+   
+}
+.list li {
+    width: 500px;
+    margin-right: 20px;
+ 
+}
+.list li:hover {
+    cursor: pointer;
+}
+
+.list ul {
+
+    display: flex;
+    justify-content: center;
+    flex-direction: row;
+    flex-wrap: wrap;
+
+
+}
+
+form input {
+    width: 500px;
+    height: 30px;
+}
+form {
+    margin: 10px;
+}
+.footer {
+    margin: 30px;
+
+}
