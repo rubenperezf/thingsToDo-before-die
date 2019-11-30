@@ -69,6 +69,7 @@ body {
 }
 .list h1 {
     text-align: center;
+    color: blue;
 }
 .list li {
     width: 500px;
@@ -77,6 +78,7 @@ body {
 }
 .list li:hover {
     cursor: pointer;
+    text-decoration: underline lightblue;
 }
 
 .list ul {
@@ -92,6 +94,7 @@ body {
 form input {
     width: 500px;
     height: 30px;
+    margin-right: 10px;
 }
 form {
     margin: 10px;

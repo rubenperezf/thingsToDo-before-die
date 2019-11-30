@@ -6,11 +6,11 @@ import { VisibilityFilters } from '../actions'
 const Footer = () => {
   return (
     <p>
-      <FilterLink filter={VisibilityFilters.SHOW_ALL}>All</FilterLink>
+      <FilterLink className='link' filter={VisibilityFilters.SHOW_ALL}>All</FilterLink>
       {' | '}
-      <FilterLink filter={VisibilityFilters.SHOW_ACTIVE}>Active</FilterLink>
+      <FilterLink className='link' filter={VisibilityFilters.SHOW_ACTIVE}>Incompleted</FilterLink>
       {' | '}
-      <FilterLink filter={VisibilityFilters.SHOW_COMPLETED}>
+      <FilterLink  className='link' filter={VisibilityFilters.SHOW_COMPLETED}>
         Completed
       </FilterLink>
     </p>

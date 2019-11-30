@@ -24,6 +24,23 @@ function getToDoThingsBeforeDie() {
   return fetch('http://localhost:2500/thingsToDo')
 }
 
+export function getToDoListFromAPI(limit) {
+  return function(dispatch) {
+    dispatch({ type: LOADING_TODOS })
+
+    return getToDoThingsBeforeDie()
+      .then(response => response.json())
+      .then(
+        todos => {
+
+          dispatch({ type: SET_TODOS, payload: todos })
+          dispatch({ type: SUCCESS_LOADING_TODOS })
+        },
+        err => dispatch({ type: FAILURE_LOADING_TODOS })
+      )
+  }
+}
+
 function addToDoThingsBeforeDie(text) {
   return fetch('http://localhost:2500/thingsToDo', {
     method: 'POST',
@@ -59,23 +76,6 @@ export function addToDoListToAPI(text) {
         err => {
           dispatch({ type: FAILED_ADDING_TODO })
         }
-      )
-  }
-}
-
-export function getToDoListFromAPI(limit) {
-  return function(dispatch) {
-    dispatch({ type: LOADING_TODOS })
-
-    return getToDoThingsBeforeDie()
-      .then(response => response.json())
-      .then(
-        todos => {
-
-          dispatch({ type: SET_TODOS, payload: todos })
-          dispatch({ type: SUCCESS_LOADING_TODOS })
-        },
-        err => dispatch({ type: FAILURE_LOADING_TODOS })
       )
   }
 }

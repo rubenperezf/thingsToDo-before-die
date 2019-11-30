@@ -52648,8 +52648,8 @@ function _interopRequireDefault(obj) { return obj && obj.__esModule ? obj : { de
 Object.defineProperty(exports, "__esModule", {
   value: true
 });
-exports.addToDoListToAPI = addToDoListToAPI;
 exports.getToDoListFromAPI = getToDoListFromAPI;
+exports.addToDoListToAPI = addToDoListToAPI;
 exports.toggleTodo = toggleTodo;
 exports.setVisibilityFilter = setVisibilityFilter;
 exports.VisibilityFilters = exports.FAILED_ADDING_TODO = exports.SUCCESS_ADDING_TODO = exports.ADDING_TODO = exports.FAILURE_LOADING_TODOS = exports.SUCCESS_LOADING_TODOS = exports.LOADING_TODOS = exports.SHOW_ACTIVE = exports.SHOW_COMPLETED = exports.SHOW_ALL = exports.SET_VISIBILITY_FILTER = exports.TOGGLE_TODO = exports.ADD_TODO = exports.SET_TODOS = void 0;
@@ -52693,6 +52693,25 @@ function getToDoThingsBeforeDie() {
   return fetch('http://localhost:2500/thingsToDo');
 }
 
+function getToDoListFromAPI(limit) {
+  return function (dispatch) {
+    dispatch({
+      type: LOADING_TODOS
+    });
+    return getToDoThingsBeforeDie().then(response => response.json()).then(todos => {
+      dispatch({
+        type: SET_TODOS,
+        payload: todos
+      });
+      dispatch({
+        type: SUCCESS_LOADING_TODOS
+      });
+    }, err => dispatch({
+      type: FAILURE_LOADING_TODOS
+    }));
+  };
+}
+
 function addToDoThingsBeforeDie(text) {
   return fetch('http://localhost:2500/thingsToDo', {
     method: 'POST',
@@ -52728,25 +52747,6 @@ function addToDoListToAPI(text) {
         type: FAILED_ADDING_TODO
       });
     });
-  };
-}
-
-function getToDoListFromAPI(limit) {
-  return function (dispatch) {
-    dispatch({
-      type: LOADING_TODOS
-    });
-    return getToDoThingsBeforeDie().then(response => response.json()).then(todos => {
-      dispatch({
-        type: SET_TODOS,
-        payload: todos
-      });
-      dispatch({
-        type: SUCCESS_LOADING_TODOS
-      });
-    }, err => dispatch({
-      type: FAILURE_LOADING_TODOS
-    }));
   };
 }
 
@@ -53165,7 +53165,7 @@ const AddToDo = ({
     }
   }, _react.default.createElement("label", {
     htmlFor: "what-to-do"
-  }, "Add more things to your bucket list: "), _react.default.createElement("input", {
+  }, "Add more things to your bucket list: "), _react.default.createElement("br", null), _react.default.createElement("input", {
     id: "what-to-do",
     value: inputTextValue,
     onChange: e => setInputTextValue(e.target.value),
@@ -53268,10 +53268,13 @@ function _interopRequireDefault(obj) { return obj && obj.__esModule ? obj : { de
 
 const Footer = () => {
   return _react.default.createElement("p", null, _react.default.createElement(_FilterLink.default, {
+    className: "link",
     filter: _actions.VisibilityFilters.SHOW_ALL
   }, "All"), ' | ', _react.default.createElement(_FilterLink.default, {
+    className: "link",
     filter: _actions.VisibilityFilters.SHOW_ACTIVE
-  }, "Active"), ' | ', _react.default.createElement(_FilterLink.default, {
+  }, "Incompleted"), ' | ', _react.default.createElement(_FilterLink.default, {
+    className: "link",
     filter: _actions.VisibilityFilters.SHOW_COMPLETED
   }, "Completed"));
 };
@@ -53365,7 +53368,7 @@ var parent = module.bundle.parent;
 if ((!parent || !parent.isParcelRequire) && typeof WebSocket !== 'undefined') {
   var hostname = "" || location.hostname;
   var protocol = location.protocol === 'https:' ? 'wss' : 'ws';
-  var ws = new WebSocket(protocol + '://' + hostname + ':' + "56010" + '/');
+  var ws = new WebSocket(protocol + '://' + hostname + ':' + "56063" + '/');
 
   ws.onmessage = function (event) {
     checkedAssets = {};

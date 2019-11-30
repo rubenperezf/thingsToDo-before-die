@@ -16,7 +16,7 @@ const AddToDo = ({ dispatch }) => {
         }}
       >
         <label htmlFor="what-to-do">Add more things to your bucket list: </label>
-
+        <br></br>
         <input
           id="what-to-do"
           value={inputTextValue}
