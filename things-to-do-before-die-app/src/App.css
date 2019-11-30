@@ -8,10 +8,10 @@ body {
     margin: 60px auto;
     width: 50%; 
     height: 80px;
-	background-color: #DDFFF7;
+	background-color: dodgerblue;
 	position: relative;
     box-shadow: 1px 1px 1px 0 rgba(0,0,0,0.75);
-    color: black;
+    color: white;
     text-align: center;
 }
 .box:after, .box:before{
@@ -39,11 +39,11 @@ body {
 
 .box:after{
 	animation-delay: -5s;
-	background-color: #93e1d8;
+	background-color: lightblue;
 	clip-path: polygon(0 0, calc(100% - (33.3333333333px)) calc(0% + (33.3333333333px)), 100% 100%, calc(0% + (33.3333333333px)) calc(100% - (33.3333333333px)));
 }
 .box:before {
-	background-color: #AA4465;
+	background-color: darkblue;
 	  clip-path: polygon(calc(0% + (33.3333333333px)) calc(0% + (33.3333333333px)), 100% 0, calc(100% - (33.3333333333px)) calc(100% - (33.3333333333px)), 0 100%);
 }
 
@@ -69,7 +69,7 @@ body {
 }
 .list h1 {
     text-align: center;
-    color: blue;
+    color: darkblue;
 }
 .list li {
     width: 500px;
