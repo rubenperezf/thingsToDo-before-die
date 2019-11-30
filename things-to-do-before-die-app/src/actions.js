@@ -65,7 +65,7 @@ export function addToDoListToAPI(text) {
       .then(result => result.json())
       .then(
         newToDo => {
-          console.log('Successfully added the todo to the API. YAY!')
+          console.log('Successfully added what to do before die')
 
           dispatch({
             type: ADD_TODO,

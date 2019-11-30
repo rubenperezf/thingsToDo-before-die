@@ -52731,7 +52731,7 @@ function addToDoListToAPI(text) {
       type: ADDING_TODO
     });
     return addToDoThingsBeforeDie(text).then(result => result.json()).then(newToDo => {
-      console.log('Successfully added the todo to the API. YAY!');
+      console.log('Successfully added what to do before die');
       dispatch({
         type: ADD_TODO,
         payload: {
@@ -53368,7 +53368,7 @@ var parent = module.bundle.parent;
 if ((!parent || !parent.isParcelRequire) && typeof WebSocket !== 'undefined') {
   var hostname = "" || location.hostname;
   var protocol = location.protocol === 'https:' ? 'wss' : 'ws';
-  var ws = new WebSocket(protocol + '://' + hostname + ':' + "56063" + '/');
+  var ws = new WebSocket(protocol + '://' + hostname + ':' + "59181" + '/');
 
   ws.onmessage = function (event) {
     checkedAssets = {};
