@@ -9,7 +9,7 @@ const App = () => {
     <div>
       <div className="box">
         <h1 className="web-header">
-          Things that you should do before die by Ruben Perez
+          Bucket list by Ruben Perez
         </h1>
       </div>
       <div className="web-body">

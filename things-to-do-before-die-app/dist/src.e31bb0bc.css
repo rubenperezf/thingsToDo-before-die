@@ -7,11 +7,12 @@ body {
 .box{
     margin: 60px auto;
     width: 50%; 
-    height: 100px;
+    height: 80px;
 	background-color: #DDFFF7;
 	position: relative;
     box-shadow: 1px 1px 1px 0 rgba(0,0,0,0.75);
     color: black;
+    text-align: center;
 }
 .box:after, .box:before{
 	mix-blend-mode:multiply;
@@ -65,6 +66,9 @@ body {
     font-size: 30px;
 
    
+}
+.list h1 {
+    text-align: center;
 }
 .list li {
     width: 500px;

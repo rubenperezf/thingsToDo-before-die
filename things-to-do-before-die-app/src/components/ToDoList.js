@@ -27,13 +27,13 @@ const ToDoList = ({ todos, loadingState, addingState, onToDoClick }) => {
 
     return (
     <div className="list">
+      <h1>Click on the activity when completed:</h1>
       <ul>
-        <h1>Click in the things that you complete and will change the color.</h1>
         {todos.map((todo, index) => (
           <ToDo key={index} {...todo} onClick={() => onToDoClick(index)} />
         ))}
       </ul>
-      </div>
+    </div>
     )
   }
 

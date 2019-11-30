@@ -15,7 +15,7 @@ const AddToDo = ({ dispatch }) => {
           setInputTextValue('')
         }}
       >
-        <label htmlFor="what-to-do">Write more things to do before die: </label>
+        <label htmlFor="what-to-do">Add more things to your bucket list: </label>
 
         <input
           id="what-to-do"

@@ -53057,7 +53057,7 @@ const ToDoList = ({
     });
     return _react.default.createElement("div", {
       className: "list"
-    }, _react.default.createElement("ul", null, _react.default.createElement("h1", null, "Click in the things that you complete and will change the color."), todos.map((todo, index) => _react.default.createElement(_ToDo.default, _extends({
+    }, _react.default.createElement("h1", null, "Click on the activity when completed:"), _react.default.createElement("ul", null, todos.map((todo, index) => _react.default.createElement(_ToDo.default, _extends({
       key: index
     }, todo, {
       onClick: () => onToDoClick(index)
@@ -53165,7 +53165,7 @@ const AddToDo = ({
     }
   }, _react.default.createElement("label", {
     htmlFor: "what-to-do"
-  }, "Write more things to do before die: "), _react.default.createElement("input", {
+  }, "Add more things to your bucket list: "), _react.default.createElement("input", {
     id: "what-to-do",
     value: inputTextValue,
     onChange: e => setInputTextValue(e.target.value),
@@ -53303,7 +53303,7 @@ const App = () => {
     className: "box"
   }, _react.default.createElement("h1", {
     className: "web-header"
-  }, "Things that you should do before die by Ruben Perez")), _react.default.createElement("div", {
+  }, "Bucket list by Ruben Perez")), _react.default.createElement("div", {
     className: "web-body"
   }, _react.default.createElement(_AddToDo.default, null), _react.default.createElement("div", {
     className: "list"
@@ -53365,7 +53365,7 @@ var parent = module.bundle.parent;
 if ((!parent || !parent.isParcelRequire) && typeof WebSocket !== 'undefined') {
   var hostname = "" || location.hostname;
   var protocol = location.protocol === 'https:' ? 'wss' : 'ws';
-  var ws = new WebSocket(protocol + '://' + hostname + ':' + "62891" + '/');
+  var ws = new WebSocket(protocol + '://' + hostname + ':' + "55722" + '/');
 
   ws.onmessage = function (event) {
     checkedAssets = {};
