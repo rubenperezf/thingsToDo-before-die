@@ -116,7 +116,7 @@ form {
   }
   @keyframes delorean {
   
-    from {left: -200px;}
+    from {left: -2000px;}
     to {left: 2000px;}
   }
   .presentation img {
