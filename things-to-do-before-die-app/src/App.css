@@ -109,12 +109,12 @@ form {
     width: 50%;
     height: 100%;
     position: fixed;
-    animation-name: spiderman;
+    animation-name: delorean;
     animation-duration: 8s;
     animation-fill-mode: forwards;
   
   }
-  @keyframes spiderman {
+  @keyframes delorean {
   
     from {left: -200px;}
     to {left: 2000px;}
